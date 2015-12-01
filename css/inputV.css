@@ -1,0 +1,25 @@
+select.inputV-component {
+    border-radius: 4px;
+    padding: 4px;
+    color: #222 !important;
+}
+input.inputV-component {
+    border-radius: 4px;
+    padding: 4px;
+    color: #222 !important;
+}
+.inputV-component.has-error {
+    color: #222 !important;
+    background: #F37373 !important;
+}
+.inputV-component.is-changed {
+    background: #8DFB8D !important;
+}
+.open-browse {
+    position:relative;
+    left: -22px;
+    cursor: pointer;
+}
+.open-browse:hover {
+    color: #D1F7F7;
+}

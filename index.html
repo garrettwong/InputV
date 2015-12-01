@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
+	<link rel="stylesheet" href="css/inputV.css" />
+
+	<script src="https://code.jquery.com/jquery-1.11.0.js"></script>
+	<script src="js/inputV.js"></script>
+
+	<script>
+		$(document).ready(function () {
+		    var $inputVComponent = $('.inputV-component').inputV({
+		        elem: 'input',
+		        browseEnabled: true,
+		        css: {
+		            width: '50%'
+		        },
+		        pattern: /test/,
+		        initialValue: 'test'
+		    });
+
+		    console.log($inputVComponent);
+
+		    $('button').click(function () {
+		        alert($inputVComponent.val());
+		    });
+		});
+	</script>
+</head>
+
+<body>
+
+	<input type="text" class="inputV-component" />
+	<button>Get Value</button>
+
+</body>
+
+</html>
