@@ -4,7 +4,7 @@
     $.fn.inputV = function (options) {
         var _self = this;
 
-        var _svnBrowserUrl = 'http://google.com';
+        var _browserUrl = 'http://google.com';
  
         var Class = {
             error: 'has-error',
@@ -36,23 +36,23 @@
         $(_self).val(settings.initialValue);
 
         // CSS
-        if (settings.svnBrowserEnabled) {
-            initSvnBrowser();
+        if (settings.browseEnabled) {
+            initBrowser();
         }
 
         if (settings.css !== null) {
             $(_self).css(settings.css);
         }
 
-        function initSvnBrowser() {
-            var $openSvnBrowser = $('<i class="fa fa-search open-browse"></i>');
-            $openSvnBrowser.click(function () {
+        function initBrowser() {
+            var $openBrowser = $('<i class="fa fa-search open-browse"></i>');
+            $openBrowser.click(function () {
                 console.log($(_self).val());
 
-                window.open(_svnBrowserUrl);
+                window.open(_browserUrl);
             });
 
-            $(_self).after($openSvnBrowser);
+            $(_self).after($openBrowser);
         }
 
         // Events
